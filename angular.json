@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "monaco-grand-prix-manager"
+    }
+  },
+  "defaultProject": "monaco-grand-prix-manager",
+  "cli": {
+    "analytics": "4cd8e439-56df-4817-bcf8-ab7dd2d2a8c7"
+  }
 }

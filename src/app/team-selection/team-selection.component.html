@@ -1,0 +1,11 @@
+<div class="team-selection-container">
+    <h1 class="team-selection-title">
+        Select Your Driver
+    </h1>
+    <mat-grid-list [cols]="4" [rowHeight]="150" [gutterSize]="10">
+        <mat-grid-tile *ngFor="let team of (teamsService.teamInformation | async)">
+            <app-team-card class="team-card mat-elevation-z15" [team]="team">
+            </app-team-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

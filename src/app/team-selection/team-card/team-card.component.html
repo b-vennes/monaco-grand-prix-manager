@@ -1,0 +1,10 @@
+<mat-card class="team-card-container" [routerLink]="'/grand-prix/' + team?.id">
+    <mat-card-header>
+        <h2>
+            {{team?.name}}
+        </h2>
+    </mat-card-header>
+    <mat-card-content>
+        {{team?.driver}}
+    </mat-card-content>
+</mat-card>

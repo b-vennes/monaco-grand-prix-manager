@@ -1,0 +1,14 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+
+    .tools {
+        margin-left: auto;
+
+        .button {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
