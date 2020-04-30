@@ -13,13 +13,19 @@ import { HomeComponent } from './home/home.component';
 import { TeamsService } from './_services/teams.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { StoreModule } from '@ngrx/store';
+import { simulationEngineReducer } from './_services/simulation-engine.reducer';
+import { SimulationEngineService } from './_services/simulation-engine.service';
+import { CommonModule } from '@angular/common';
+import { GrandPrixComponent } from './grand-prix/grand-prix.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamSelectionComponent,
     TeamCardComponent,
-    HomeComponent
+    HomeComponent,
+    GrandPrixComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +36,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
+    StoreModule.forRoot({engine: simulationEngineReducer}),
   ],
-  providers: [TeamsService],
+  providers: [
+    TeamsService,
+    SimulationEngineService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

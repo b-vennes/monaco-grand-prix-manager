@@ -1,0 +1,7 @@
+<div class="grand-prix-container">
+    <p>Grand Prix</p>
+
+    <div *ngFor="let telemetry of (engine$ | async)">
+        <p>Car Number: {{telemetry?.carNumber}}, Distance: {{telemetry?.distance}}</p>
+    </div>
+</div>
