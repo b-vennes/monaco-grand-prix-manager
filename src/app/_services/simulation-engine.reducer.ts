@@ -9,9 +9,9 @@ export const initialState = [
 ];
 
 const _simulationEngineReducer = createReducer(initialState,
-    on(tick, state => {
-        return state.map(telemetry => {
-            return calculateNextTelemetry(telemetry);
+    on(tick, (state) => {
+        return state.map((telemetry) => {
+            return getNextTelemetry(telemetry);
         });
     })
 );
@@ -20,7 +20,7 @@ export function simulationEngineReducer(state, action) {
     return _simulationEngineReducer(state, action);
 }
 
-function calculateNextTelemetry(telemetry: CarTelemetry): CarTelemetry {
+function getNextTelemetry(telemetry: CarTelemetry): CarTelemetry {
     const lapLocation = telemetry.distance % 100;
 
     // if in corner

@@ -20,28 +20,28 @@ import { CommonModule } from '@angular/common';
 import { GrandPrixComponent } from './grand-prix/grand-prix.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TeamSelectionComponent,
-    TeamCardComponent,
-    HomeComponent,
-    GrandPrixComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatGridListModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    MatToolbarModule,
-    StoreModule.forRoot({engine: simulationEngineReducer}),
-  ],
-  providers: [
-    TeamsService,
-    SimulationEngineService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        TeamSelectionComponent,
+        TeamCardComponent,
+        HomeComponent,
+        GrandPrixComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatGridListModule,
+        MatCardModule,
+        MatButtonModule,
+        MatIconModule,
+        MatToolbarModule,
+        StoreModule.forRoot({ engine: simulationEngineReducer }),
+    ],
+    providers: [
+        TeamsService,
+        SimulationEngineService,
+    ],
+    bootstrap: [AppComponent],
 })
 export class AppModule { }

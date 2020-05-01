@@ -19,5 +19,9 @@ module.exports = {
     '@typescript-eslint',
   ],
   'rules': {
+    'new-cap': 'off',
+    'indent': ['error', 4],
+    'linebreak-style': 'off',
+    'object-curly-spacing': ['error', 'always'],
   },
 };
